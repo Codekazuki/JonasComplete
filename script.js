@@ -133,3 +133,9 @@ for (let i = 0; i < cats.length - 1; i++) {
 }
 const capCat = cats.map((cat) => cat.toUpperCase());
 console.log(capCat);
+const cars = ["benz", "lexus", "toyota"];
+console.log(cars);
+console.log(cars.length);
+console.log(cars[0]);
+cars[1] = "Peugeot";
+console.log(cars);
