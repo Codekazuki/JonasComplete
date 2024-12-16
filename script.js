@@ -139,3 +139,12 @@ console.log(cars.length);
 console.log(cars[0]);
 cars[1] = "Peugeot";
 console.log(cars);
+
+cars.push("504");
+console.log(cars);
+cars.pop();
+console.log(cars);
+cars.unshift("505");
+console.log(cars);
+cars.shift();
+console.log(cars);
