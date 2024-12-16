@@ -137,7 +137,7 @@ const cars = ["benz", "lexus", "toyota"];
 console.log(cars);
 console.log(cars.length);
 console.log(cars[0]);
-cars[1] = "Peugeot";
+cars[1] = "peugeot";
 console.log(cars);
 
 cars.push("504");
@@ -154,3 +154,18 @@ console.log(cars.includes("504"));
 cars.push("504");
 console.log(cars);
 console.log(cars.includes("504"));
+
+console.log(cars);
+const myBikes = ["Jincheng", "Suzuki"];
+console.log(cars.concat("BRT"));
+console.log(cars);
+console.log(cars.sort());
+const deposits = [100, 8383, 937, 999, 100, 889, 2];
+console.log(deposits.filter((good) => good < 900));
+const total = deposits.reduce(function (acc, cur, i, arr) {
+  return acc + cur;
+}, 0);
+const stillTotal = deposits.reduce((acc, cur) => acc + cur, 0);
+
+console.log(total);
+console.log(stillTotal);
