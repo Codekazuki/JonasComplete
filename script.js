@@ -160,12 +160,61 @@ const myBikes = ["Jincheng", "Suzuki"];
 console.log(cars.concat("BRT"));
 console.log(cars);
 console.log(cars.sort());
-const deposits = [100, 8383, 937, 999, 100, 889, 2];
-console.log(deposits.filter((good) => good < 900));
-const total = deposits.reduce(function (acc, cur, i, arr) {
+
+// console.log(doubleNumber(39));
+const friends = ["caleb", "ojey", "AZ"];
+const caleb = "heheheh";
+const caleb2 = 87;
+console.log(typeof friends);
+console.log(friends);
+const amount = [
+  2000, 21000, -17500, -10000, -48000, 520000, 78000, 1800000, -7000, 180000,
+];
+
+console.log(amount.length);
+console.log(amount[amount.length - 1]);
+console.log(amount[amount.length / 2]);
+console.log(friends);
+console.log(friends[0]);
+console.log(friends[1]);
+friends[2] = "Mary";
+console.log(friends);
+friends[3] = "john";
+console.log(friends);
+friends.push("Nneka");
+console.log(friends);
+friends.pop();
+console.log(friends);
+friends.shift();
+console.log(friends);
+delete friends[1];
+console.log(friends);
+friends[1] = "peter";
+console.log(friends);
+friends.unshift("Chi");
+console.log(friends);
+console.log(amount);
+console.log(amount.includes(-7000));
+const ev = [2, 3, 4];
+console.log(ev.every((banana) => banana < 4));
+const trialNum = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+];
+console.log(trialNum.every((eachNum) => eachNum > 1));
+console.log(trialNum.map((eachNum) => eachNum * 2));
+console.log(trialNum.map((eachNum) => eachNum ** 3));
+console.log(trialNum.filter((banana) => banana > 5));
+console.log(
+  trialNum.filter((banana) => banana % 2 === 0).map((banana) => banana ** 2)
+);
+console.log(trialNum.concat(ev));
+
+const deposits = [100, 8383, 937, 999, 100, 889, 722, 878];
+
+const total = deposits.reduce(function (acc, cur) {
   return acc + cur;
 }, 0);
-const stillTotal = deposits.reduce((acc, cur) => acc + cur, 0);
 
+const stillTotal = deposits.reduce((acc, cur) => acc + cur, 0);
 console.log(total);
 console.log(stillTotal);
