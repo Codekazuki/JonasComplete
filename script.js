@@ -221,5 +221,11 @@ console.log(stillTotal);
 console.log("start");
 setTimeout(() => {
   console.log("after 4 second");
+  setTimeout(() => {
+    console.log("after 3 seconds");
+    setTimeout(() => {
+      console.log("after 2 seconds");
+    }, 2000);
+  }, 3000);
 }, 4000);
 console.log("end");
