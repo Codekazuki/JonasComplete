@@ -218,3 +218,8 @@ const total = deposits.reduce(function (acc, cur) {
 const stillTotal = deposits.reduce((acc, cur) => acc + cur, 0);
 console.log(total);
 console.log(stillTotal);
+console.log("start");
+setTimeout(() => {
+  console.log("after 4 second");
+}, 4000);
+console.log("end");
