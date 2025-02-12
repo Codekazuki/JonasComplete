@@ -229,3 +229,15 @@ setTimeout(() => {
   }, 3000);
 }, 4000);
 console.log("end");
+fetch("/api/get-data").then((response) => {
+  console.log(response);
+  // Response { type: 'basic', status: 200, ...}
+});
+fetch("/api/get-data")
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    console.log(json);
+    // { data: { ... } }
+  });
