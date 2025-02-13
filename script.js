@@ -1,9 +1,8 @@
-console.log(hello);
+console.log("hee");
 
 const fetchData = async () => {
   const response = await fetch();
   const data = await response.json();
 };
-useEffect(() => {
-  fetchData();
-}, []);
+
+console.log([...Array(30).keys()]);
