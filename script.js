@@ -1,11 +1,8 @@
-for (let i = 1; i <= 50; i++) {
-  if (i > 1) {
-    console.log(`I have coverered ${i} kms`);
-  } else console.log(`I have coverered ${i} km`);
-}
-const friends = ["Afuye", "Kalou", "Boaz"];
-console.log(friends);
-console.log(friends[1]);
-const years = new Array(1984, 1987, 1990);
-console.log(years);
-console.log(years[2]);
+const arr = [2, 3, 4, 5, 6];
+console.log(arr);
+console.log(arr.reverse());
+console.log(arr);
+const arr2 = [7, 8, 9];
+console.log([...arr, ...arr2]);
+console.log(arr.concat(arr2));
+console.log(arr);
