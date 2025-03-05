@@ -58,3 +58,30 @@ const BMIJohn = massJohn / heightJohn ** 2;
 console.log(BMIJohn, BMIMark);
 const markHigherBMI = BMIJohn > BMIMark;
 console.log(markHigherBMI);
+const jonas = " I'm " + firstName + ", a" + " good guy ";
+console.log(jonas);
+console.log(
+  "heloo \n\
+please \n\
+I am good"
+);
+console.log(
+  `hello
+people
+of
+God`
+);
+let age = 26;
+
+if (age <= 19) {
+  console.log("He never clock 20... he is 19-");
+} else if (age >= 20 && age <= 25) {
+  console.log("He don pass 20");
+} else {
+  console.log("na agba");
+}
+console.log("1998", 1998);
+const year = "1990";
+console.log(year);
+console.log(Number(year));
+console.log(year);
