@@ -134,3 +134,54 @@ if (scoreDolphins > scoreKoalas) {
 } else {
   console.log("Both win the trophy 🏆");
 }
+// statement vs expression
+// expression produces a value
+// statement does not produce a value
+true && false;
+console.log(`I
+Love
+God`);
+
+//truthy and falsy
+// there are 5 falsy values
+// 1. false
+// 2. 0
+// 3. '' empty string
+// 4. undefined
+// 5. NaN
+
+if ("") {
+  console.log("This is true");
+} else {
+  console.log("this is false");
+}
+// type conversion vs type coersion
+
+// + - / *
+
+console.log("2" + 2);
+// left to right
+//  + concatenates ..... it turnes number to string
+// - / * converts to number
+console.log("10" + "5" - 2);
+console.log("10" + "4" - 2 + "8");
+console.log(2 + 3 + 5 + "6" + (2 + 5));
+console.log("10" + 8 + "3" - 2 + "8" * 2);
+
+console.log(2 + "3" * 2);
+
+// const yob = Number(prompt("how old are you"));
+// console.log(yob + 10);
+// Number();
+age = 100;
+if (age <= 50) {
+  console.log("You are still young");
+} else if (age >= 51 && age <= 99) {
+  console.log("He is old");
+} else {
+  console.log("all conditions not met");
+}
+
+// && and operator .... all conditions correct
+// || or operator ..... one condition correct
+// ! not operator
