@@ -185,3 +185,22 @@ if (age <= 50) {
 // && and operator .... all conditions correct
 // || or operator ..... one condition correct
 // ! not operator
+function revereStr(str) {
+  return str === str.split("").reverse().join("");
+}
+console.log(revereStr("ojo"));
+
+function revInt(integer) {
+  const reversed = integer.toString().split("").reverse().join("");
+  return parseInt(reversed) * Math.sign(integer);
+}
+console.log(revInt(-1234));
+const sentenceCapitalise = (str) => {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.slice(1))
+    .join(" ");
+};
+
+console.log(sentenceCapitalise("jesus is lord"));
