@@ -185,22 +185,26 @@ if (age <= 50) {
 // && and operator .... all conditions correct
 // || or operator ..... one condition correct
 // ! not operator
-function revereStr(str) {
-  return str === str.split("").reverse().join("");
-}
-console.log(revereStr("ojo"));
 
-function revInt(integer) {
-  const reversed = integer.toString().split("").reverse().join("");
-  return parseInt(reversed) * Math.sign(integer);
+// variable in a function that serves as placeholder
+// actual value that is provided when the function is called
+
+function sum(x, y) {
+  return x + y;
 }
-console.log(revInt(-1234));
-const sentenceCapitalise = (str) => {
-  return str
-    .toLowerCase()
-    .split(" ")
-    .map((word) => word[0].toUpperCase() + word.slice(1))
-    .join(" ");
+console.log(sum(6000, 746));
+
+function double(x) {
+  return x * 2;
+}
+console.log(double(17));
+
+const sumArrow = (a, c) => {
+  return a + c;
 };
+console.log(sumArrow(20, 72));
 
-console.log(sentenceCapitalise("jesus is lord"));
+// const numbers = [0.08, 2, 4, 6, 7, 8, 9, 20, 56, 69, 69];
+// const doubled = numbers.map((x) => x * 2);
+// console.log(doubled);
+const arrowFunction = () => {};
