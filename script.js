@@ -204,7 +204,15 @@ const sumArrow = (a, c) => {
 };
 console.log(sumArrow(20, 72));
 
-// const numbers = [0.08, 2, 4, 6, 7, 8, 9, 20, 56, 69, 69];
 // const doubled = numbers.map((x) => x * 2);
 // console.log(doubled);
 const arrowFunction = () => {};
+const numbers = [0.08, 2, 4, 6, 7, 8, 9, 20, 56, 69, 69];
+const newNumb = [];
+numbers.forEach((el) => {
+  newNumb.push(el * 5);
+});
+console.log(numbers, newNumb);
+const nameT = "people";
+const rev = nameT === nameT.split("").reverse().join("");
+console.log(rev);
