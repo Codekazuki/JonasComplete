@@ -216,3 +216,12 @@ console.log(numbers, newNumb);
 const nameT = "people";
 const rev = nameT === nameT.split("").reverse().join("");
 console.log(rev);
+
+const revStr = (str) => {
+  return str.split("").reverse().join("");
+};
+console.log(revStr(""));
+const countCharacter = (str, char) => {
+  return str.toLowerCase().split(char).length - 1;
+};
+console.log(countCharacter("Javascript", "j"));
