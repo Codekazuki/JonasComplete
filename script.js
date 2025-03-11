@@ -34,3 +34,16 @@ const addition = numbers.reduce((acc, summ) => {
   return (acc = acc + summ);
 }, 0);
 console.log(addition);
+document.body.append("hello world");
+
+// reduce no pass like this
+// array.reduce((accumulator, currentValue, currentIndex, array) => {
+//   // logic here
+// }, initialValue);
+const words = ["hello", "world", "reduce", "method"];
+
+const sentence = words.reduce((acc, cur) => {
+  return (acc = acc + " " + cur);
+}, "");
+
+console.log(sentence);
