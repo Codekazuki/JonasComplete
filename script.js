@@ -1,49 +1,60 @@
-const init = () => {
-  const myName = "Ade";
-  const callName = () => {
-    console.log(`hello ${myName}`);
+const addNumber = (a, b) => {
+  return a + b;
+};
+console.log(addNumber(5, 8));
+
+const outer = () => {
+  const myName = "Ayo";
+
+  const inner = () => {
+    console.log(`my name is ${myName}`);
   };
-  callName();
-};
-init();
 
-const cutFruit = (fruit) => {
-  return fruit / 0.25;
+  inner();
 };
+// console.log(outer());
+// closure
+outer();
 
-const makeJuice = (mango, pawpaw) => {
-  const mangoPieces = cutFruit(mango);
-  const pawpawPieces = cutFruit(pawpaw);
-  console.log(
-    `Juice with ${mangoPieces} pieces of mango and ${pawpawPieces} pieces of pawpaw`
-  );
+const juiceMaker = (orange, lemon) => {
+  const message = `make juice with ${orange} orange and ${lemon} lemon`;
+  console.log(message);
 };
-makeJuice(150, 250);
+juiceMaker(4, 2);
+juiceMaker(18, 8);
+juiceMaker(9, 6);
 
-const numbers = [5, 54, 23, 5, 18];
-const addup = numbers.reduce((acc, sum, i, arr) => {
-  return (acc += sum);
+const friends = ["paul", 6, "Robiat", "Yetunde"];
+console.log(friends);
+//methods are functions attached to an object
+friends.pop();
+console.log(friends);
+friends.shift();
+console.log(friends);
+friends.push("Biodun");
+console.log(friends);
+friends.unshift("Tbasz");
+console.log(friends);
+// arrays are indexed based..... and it starts from 0
+// MAP, FILTER AND REDUCE
+const numbers = [2, 4, 6, 8, 8, 3, 2, 4];
+console.log(numbers);
+
+const doubleNum = numbers.map((x) => x * 2);
+console.log(doubleNum);
+console.log(numbers);
+const times10 = numbers.map((el) => el * 10);
+console.log(times10);
+
+//filter
+const belowFive = numbers.filter((el) => el > 5);
+console.log(belowFive);
+
+const oddNumber = numbers.filter((x) => x % 2 !== 0);
+const evenNumber = numbers.filter((x) => x % 2 === 0);
+console.log(oddNumber, evenNumber);
+
+const addUp = numbers.reduce((acc, sum) => {
+  return (acc = acc + sum);
 }, 0);
-console.log(addup);
-const greaterthan20 = numbers.filter((el) => {
-  return el > 20;
-});
-console.log(greaterthan20);
-
-const addition = numbers.reduce((acc, summ) => {
-  return (acc = acc + summ);
-}, 0);
-console.log(addition);
-document.body.append("hello world");
-
-// reduce no pass like this
-// array.reduce((accumulator, currentValue, currentIndex, array) => {
-//   // logic here
-// }, initialValue);
-const words = ["hello", "world", "reduce", "method"];
-
-const sentence = words.reduce((acc, cur) => {
-  return (acc = acc + " " + cur);
-}, "");
-
-console.log(sentence);
+console.log(addUp);
