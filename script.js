@@ -53,8 +53,49 @@ console.log(belowFive);
 const oddNumber = numbers.filter((x) => x % 2 !== 0);
 const evenNumber = numbers.filter((x) => x % 2 === 0);
 console.log(oddNumber, evenNumber);
-
-const addUp = numbers.reduce((acc, sum) => {
-  return (acc = acc + sum);
+const newNumbers = [2, 4, 6, 8, 8, 3, 2, 4, 10, 38, 5, 6];
+//REDUCE
+const sum = newNumbers.reduce((acc, sum) => {
+  return (sum = acc + sum);
 }, 0);
-console.log(addUp);
+console.log(sum);
+// for loop....... while loop
+for (let fasting = 1; fasting <= 30; fasting++) {
+  console.log(`I have fasted for ${fasting}days`);
+}
+//for loop
+for (let pushUp = 1; pushUp <= 4; pushUp++) {
+  console.log(`Tbasz has done ${pushUp} pushup`);
+}
+console.log(newNumbers);
+for (let i = 1; i <= newNumbers.length - 1; i++) {
+  console.log(newNumbers[i] * 2);
+}
+
+//while loop
+
+a = 1;
+while (a <= 5) {
+  console.log(`we have done it ${a} times`);
+  a++;
+}
+
+let chorus = 1;
+while (chorus < 21) {
+  console.log(`we don sing am ${chorus} ${chorus === 1 ? "time" : "times"}`);
+  chorus++;
+}
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+
+for (let i = 0; i < newNumbers.length; i++) {
+  console.log(newNumbers[i] * 10);
+}
+let summation = 1;
+console.log(summation);
+for (let i = 1; i <= 5; i++) {
+  summation = summation * i;
+}
+console.log(summation);
+// 1 2 3 4 5
