@@ -99,3 +99,11 @@ for (let i = 1; i <= 5; i++) {
 }
 console.log(summation);
 // 1 2 3 4 5
+function random(min, max) {
+  const num = Math.floor(Math.random() * (max - min + 1)) + min;
+  return num;
+}
+
+console.log(random(1, 10));
+console.log(document.querySelector(".name").textContent);
+console.log(document.getElementsByClassName("names")[0].textContent);
