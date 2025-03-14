@@ -1,16 +1,14 @@
-let secretNumber = Math.trunc(Math.random() * 20) + 1;
-console.log(secretNumber);
+// DOM document object model
+
+const secretNumber = Math.trunc(Math.random() * 20) + 1;
 document.querySelector(".check").addEventListener("click", () => {
-  let userGuess = Number(document.querySelector(".guess").value);
+  const userGuess = Number(document.querySelector(".guess").value);
 
   if (!userGuess) {
     document.querySelector(".message").innerHTML =
       "Input a valid number in the box";
   } else if (userGuess === secretNumber) {
     document.querySelector(".message").innerHTML = "You don get am";
-    document.querySelector("body").style.backgroundColor = "green";
-    document.querySelector(".secNum").innerHTML = secretNumber;
-    document.querySelector(".again").style.display = "block";
   } else if (userGuess > 20) {
     document.querySelector(".message").innerHTML =
       " eye dey pain you? we say between 1 and 20";
@@ -19,11 +17,4 @@ document.querySelector(".check").addEventListener("click", () => {
   } else if (userGuess < secretNumber) {
     document.querySelector(".message").innerHTML = "guess too low";
   }
-  document.querySelector(".guess").value = "";
-  document.querySelector(".again").addEventListener("click", () => {
-    secretNumber = Math.trunc(Math.random() * 20) + 1;
-    document.querySelector(".message").innerHTML = "Start guessing";
-    document.querySelector("body").style.backgroundColor = "";
-    document.querySelector(".secNum").innerHTML = "?";
-  });
 });
