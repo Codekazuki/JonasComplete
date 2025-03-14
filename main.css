@@ -12,7 +12,13 @@
   color: rgb(114, 29, 29);
   animation: pulse 0.8s ease-in-out infinite;
 }
-
+.secNum {
+  font-size: 4rem;
+  background-color: grey;
+  max-width: 8rem;
+  text-align: center;
+  margin: 0 auto;
+}
 @keyframes pulse {
   0% {
     transform: scale(1);
