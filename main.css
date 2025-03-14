@@ -19,6 +19,9 @@
   text-align: center;
   margin: 0 auto;
 }
+.again {
+  display: none;
+}
 @keyframes pulse {
   0% {
     transform: scale(1);
