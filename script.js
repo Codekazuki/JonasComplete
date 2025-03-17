@@ -33,3 +33,14 @@ document.querySelector(".check").addEventListener("click", () => {
     document.querySelector(".hiddenNumber").innerHTML = "???";
   });
 });
+const add = () => {
+  console.log("hello");
+  return 2 + 2;
+};
+const square = () => {
+  console.log("HII");
+  return 4 * 4;
+};
+console.log(add(), square());
+const arr = ["a", "b", "c", "d", "a", "a"];
+console.log(arr.indexOf("a", -1));
