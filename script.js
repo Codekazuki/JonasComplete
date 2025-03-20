@@ -66,23 +66,35 @@
 // console.log(two);
 // lexical environment
 // scope,scope chain, closure
-function outer() {
-  var hello = 20;
-  console.log("hello, I am visible");
-  console.log(hello);
-  function inner() {}
-  inner();
-}
-// console.log(hello);
-outer();
-let a;
-console.log(a);
-// console.log(b);
-a = 50 + 25;
-console.log(a);
 
-if (!totalProduct) deleteAll();
-var totalProduct = 25;
-function deleteAll() {
-  console.log("All deleted");
+// Write a program that determines whether a given number is positive or negative.
+
+function checkNumber(number) {
+  if (number > 0) {
+    console.log(`${number} is positive`);
+  } else if (number < 0) {
+    console.log(`${number} is negative`);
+  } else {
+    console.log("number is 0");
+  }
 }
+checkNumber(-56);
+// hoisting
+
+// console.log(b);
+// console.log(c);?
+// console.log(a);
+
+// let a = 6;
+// const b = 9;
+// const c = 10;
+
+let totalProdct = 8;
+
+function deleteAll() {
+  console.log("all cart deleted");
+}
+if (!totalProdct) deleteAll();
+//TEMPORAL DEAD ZONE
+
+// this keyword
