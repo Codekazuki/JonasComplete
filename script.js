@@ -80,3 +80,9 @@ console.log(a);
 // console.log(b);
 a = 50 + 25;
 console.log(a);
+
+if (!totalProduct) deleteAll();
+var totalProduct = 25;
+function deleteAll() {
+  console.log("All deleted");
+}
