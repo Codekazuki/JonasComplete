@@ -98,3 +98,30 @@ if (!totalProdct) deleteAll();
 //TEMPORAL DEAD ZONE
 
 // this keyword
+//array destructuring
+
+const numbers = [3, 4, 5, 7, 4, 5, 6, 7, 8, 9, 0];
+const newNumbers = [1, 2, numbers[0], numbers[1], numbers[2], numbers[3]];
+console.log(numbers);
+console.log(newNumbers);
+
+const betterWay = [1, 2, ...numbers];
+console.log(betterWay);
+const arr = [1, 2, 3];
+const [x, y, z] = arr;
+console.log(x, y, z);
+
+const school = {
+  name: "Babcock",
+  location: "Ilisan-remo",
+  faculties: ["education", "sciences", "engineering"],
+};
+console.log(school.faculties);
+const [firstFaculty, , thirdFaculty] = school.faculties;
+console.log(firstFaculty, thirdFaculty);
+const vovels = ["a", "e"];
+const consonants = ["n", "m"];
+const alpha = [...vovels, ...consonants];
+console.log(alpha);
+const shallowAlpha = [...alpha];
+console.log(shallowAlpha);
