@@ -1,12 +1,5 @@
-.ins {
-  display: none;
-}
-.playAgain {
-  display: none;
-}
-.hiddenNumber {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: grey;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
