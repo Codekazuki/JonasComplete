@@ -16,3 +16,4 @@ let isLoggedIn = "false";
 let isVerified = undefined;
 let haveAccess = NaN;
 console.log(haveAccess && isVerified && isAdmin && "Access granted");
+const numbers = [1, 2, 3, 4, 4];
