@@ -70,13 +70,3 @@ for (const num of eplTeams.entries()) {
 for (let i = 2; i <= 10; i = i + 2) {
   console.log(i);
 }
-const check = (seat) => {
-  const s = seat.slice(-1);
-  if (s === "a" || s === "e") {
-    console.log("you get vowel");
-  } else {
-    console.log("you get consonant");
-  }
-};
-check("34b");
-check("23a");
