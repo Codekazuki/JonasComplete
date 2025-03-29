@@ -69,10 +69,14 @@ console.log(secondName);
 console.log(secondName.trim());
 function formatName(name) {
   const lowerYet = name.trim().toLowerCase();
-  return (
+
+  if (lowerYet.length === 0) {
+    ("Put a valid name");
+  } else {
     lowerYet[0].toUpperCase() +
-    lowerYet.slice(1, -1) +
-    lowerYet[name.length - 1].toUpperCase()
-  );
+      lowerYet.slice(1, -1) +
+      lowerYet[name.length - 1].toUpperCase();
+  }
 }
 console.log(formatName("biodun"));
+console.log(formatName(""));
