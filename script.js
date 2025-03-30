@@ -90,3 +90,8 @@ console.log("5" + 3);
 const nummm = [1, 2, 3];
 nummm.push(4);
 console.log(nummm);
+const addNum = (a, b, c) => {
+  return a + b + c;
+};
+console.log(addNum(2, 4));
+const greet = () => {};
