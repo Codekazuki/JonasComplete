@@ -86,3 +86,7 @@ function reverseString(str) {
   return str.split("").reverse().join("");
 }
 console.log(reverseString("helloo"));
+console.log("5" + 3);
+const nummm = [1, 2, 3];
+nummm.push(4);
+console.log(nummm);
