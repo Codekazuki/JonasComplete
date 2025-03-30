@@ -108,4 +108,12 @@ function checkLength(str) {
   }
   return console.log(str.length);
 }
-checkLength("Oyinguegyu");
+checkLength("Ruth");
+const checkOdd = (x) => {
+  if (x > 1 && x % 2 === 0) {
+    return console.log(` ${x} na even number`);
+  } else if (x > 1 && x % 2 !== 0) {
+    return console.log(` ${x} na odd number`);
+  }
+};
+checkOdd(5);
