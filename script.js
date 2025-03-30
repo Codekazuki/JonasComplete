@@ -94,4 +94,10 @@ const addNum = (a, b, c) => {
   return a + b + c;
 };
 console.log(addNum(2, 4));
-const greet = () => {};
+const greet = (name) => {
+  if (typeof name !== "string") {
+    return console.log(`${name} inputed is not a valid name`);
+  }
+  return console.log(`heloo ${name}`);
+};
+greet("Gbemi");
