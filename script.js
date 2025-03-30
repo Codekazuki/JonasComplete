@@ -101,3 +101,11 @@ const greet = (name) => {
   return console.log(`heloo ${name}`);
 };
 greet("Gbemi");
+
+function checkLength(str) {
+  if (typeof str !== "string") {
+    return console.log("input a valid string");
+  }
+  return console.log(str.length);
+}
+checkLength("Oyinguegyu");
