@@ -81,3 +81,8 @@ function formatName(name) {
 }
 
 console.log(formatName(""));
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+console.log(reverseString("helloo"));
