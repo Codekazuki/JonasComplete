@@ -1,125 +1,46 @@
 "use strict";
 
-//short circuiting
-// || operator ...... it returns the first truthy value, or the last value if none is true
-
-console.log(undefined || null || NaN || 0 || "");
-
-// && operator returns the first falsy value or the last value if all are true
-
-// console.log(34 && true);
-console.log("Jesus is Lord");
-const num = [1, 2, 3];
-console.log(num.length);
-
-const school = "code with kazuki";
-const course = "javascript";
-console.log(course[2]);
-console.log(school.length);
-console.log(course.indexOf("a"));
-
-//slice
-console.log(school.slice(10, 16));
-console.log(course.slice(-1));
-//a & b .....science, c & d ...... commercial .... e & f ....arts
-// const checkClass = (arm) => {
-//   const individualClass = arm.slice(-1);
-//   if (individualClass === "a" || individualClass === "b") {
-//     console.log("na science class");
-//   } else if (individualClass === "c" || individualClass === "d") {
-//     console.log("Na commercial student");
-//   } else if (individualClass === "e" || individualClass === "f") {
-//     console.log("na Arts students");
-//   } else {
-//     console.log("na mechanic");
-//   }
-// };
-// checkClass("5b");
-// checkClass("5c");
-// checkClass("5e");
-// checkClass("5p");
-// checkClass("53");
-const checkCountry = (check) => {
-  const nationality = check.slice(-2);
-  if (nationality === "ng") {
-    console.log("Is a Nigerian");
-  } else if (nationality === "gh") {
-    console.log("Is a Ghanian");
-  } else if (nationality === "us") {
-    console.log("Is an American");
-  } else {
-    console.log("Is an Ijebu");
+function makeTea() {
+  function pourMilk() {
+    console.log("milk poured");
   }
-};
-checkCountry("3456ng");
-checkCountry("3456gh");
-checkCountry("3456us");
-checkCountry("345346us");
-
-console.log(school.toLowerCase());
-console.log(school.toUpperCase());
-const country = "Nigeria";
-
-const firstName = "   sule";
-
-const lowerYet = firstName.trim().toLowerCase();
-console.log(lowerYet[0].toUpperCase() + lowerYet.slice(1));
-const secondName = "   Abdul";
-console.log(secondName);
-console.log(secondName.trim());
-function formatName(name) {
-  const lowerYet = name.trim().toLowerCase();
-
-  if (lowerYet.length === 0) {
-    return console.log("heeeee");
-  }
-  return (
-    lowerYet[0].toUpperCase() +
-    lowerYet.slice(1, -1) +
-    lowerYet[lowerYet.length - 1].toUpperCase()
-  );
+  pourMilk();
+  console.log("tea made");
 }
+makeTea();
+const numbers = [1, 2, 3, 4, 5];
+const doubleNum = numbers.map((y) => y * 2);
+console.log(numbers);
+console.log(doubleNum);
+const halfNum = numbers.map((x) => {
+  return x * 0.5;
+});
+console.log(halfNum);
+const addFiftyPercent = numbers.map((a) => {
+  return a + a / 2;
+});
+console.log(addFiftyPercent);
+console.log(numbers);
 
-console.log(formatName(""));
+const tripleNum = numbers.map;
 
-function reverseString(str) {
-  return str.split("").reverse().join("");
+//filter
+const greaterThanThree = numbers.filter((el) => el >= 3);
+console.log(greaterThanThree);
+
+const an = numbers.filter((num) => num % 2 !== 0);
+console.log(an);
+//reduce
+
+let fatimaResult = numbers.reduce((acc, curr) => {
+  return acc + curr;
+}, 10);
+console.log(fatimaResult);
+let halimaResult = numbers.reduce((acc, curr) => {
+  return acc * curr;
+}, 1);
+console.log(halimaResult);
+function factorial(num) {
+  return num * (num - 1);
 }
-console.log(reverseString("helloo"));
-console.log("5" + 3);
-const nummm = [1, 2, 3];
-nummm.push(4);
-console.log(nummm);
-const addNum = (a, b, c) => {
-  return a + b + c;
-};
-console.log(addNum(2, 4));
-const greet = (name) => {
-  if (typeof name !== "string") {
-    return console.log(`${name} inputed is not a valid name`);
-  }
-  return console.log(`heloo ${name}`);
-};
-greet("Gbemi");
-
-function checkLength(str) {
-  if (typeof str !== "string") {
-    return console.log("input a valid string");
-  }
-  return console.log(str.length);
-}
-checkLength("Ruth");
-const checkOdd = (x) => {
-  if (x > 1 && x % 2 === 0) {
-    return console.log(` ${x} na even number`);
-  } else if (x > 1 && x % 2 !== 0) {
-    return console.log(` ${x} na odd number`);
-  }
-};
-checkOdd(5);
-function factorial(n) {
-  if (n === 0) return 1;
-  return n * factorial(n - 1);
-}
-
-console.log(factorial(5));
+console.log(factorial(100));
