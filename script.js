@@ -44,6 +44,3 @@ function factorial(num) {
   return num * (num - 1);
 }
 console.log(factorial(100));
-const myName = "Boy";
-console.log(myName);
-console.log(myName.split("").reverse().join(""));
