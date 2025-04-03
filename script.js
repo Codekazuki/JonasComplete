@@ -9,38 +9,37 @@ function makeTea() {
 }
 makeTea();
 const numbers = [1, 2, 3, 4, 5];
-const doubleNum = numbers.map((y) => y * 2);
 console.log(numbers);
-console.log(doubleNum);
-const halfNum = numbers.map((x) => {
-  return x * 0.5;
-});
-console.log(halfNum);
-const addFiftyPercent = numbers.map((a) => {
-  return a + a / 2;
-});
-console.log(addFiftyPercent);
-console.log(numbers);
+// console.log(numbers.reverse());
+const word = "Yetunde";
+// console.log(word.reverse()); impossible
+// console.log(numbers.slice(2));
+// console.log(numbers);
+// console.log(numbers.splice(-3));
+// console.log(numbers);
+const moreNumbers = [6, 7, 8, 9];
 
-const tripleNum = numbers.map;
+console.log(numbers.join(""));
+console.log(moreNumbers.at(0));
+console.log(moreNumbers[0]);
+console.log(word.at(3));
 
-//filter
-const greaterThanThree = numbers.filter((el) => el >= 3);
-console.log(greaterThanThree);
+const newNumbers = [-50, 0, 100, 500, 300, 400, 700];
 
-const an = numbers.filter((num) => num % 2 !== 0);
-console.log(an);
-//reduce
+let money;
 
-let fatimaResult = numbers.reduce((acc, curr) => {
-  return acc + curr;
-}, 10);
-console.log(fatimaResult);
-let halimaResult = numbers.reduce((acc, curr) => {
-  return acc * curr;
-}, 1);
-console.log(halimaResult);
-function factorial(num) {
-  return num * (num - 1);
+for (const [i, money] of newNumbers.entries()) {
+  if (money >= 500) {
+    console.log(`day ${i + 1} : amount ${money} is high`);
+  } else {
+    console.log(`day ${i + 1} : amount ${Math.abs(money)} is low`);
+  }
 }
-console.log(factorial(100));
+console.log("******** FOR EACH *********");
+newNumbers.forEach((amount, i, arr) => {
+  if (amount >= 500) {
+    console.log(`day ${i + 1} : amount is high`);
+  } else {
+    console.log(`day ${i + 1} : amount is low`);
+  }
+});
