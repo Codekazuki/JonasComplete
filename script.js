@@ -14,12 +14,30 @@ function two(y) {
   console.log("I am the second");
   y();
 }
+
 function three(z) {
   console.log("I am the third");
   z();
 }
-function four() {
-  console.log("I am the four");
+
+function four(a) {
+  console.log("I am the fourth");
+  a();
 }
 
-one(() => two(() => three(four)));
+function five(b) {
+  console.log("I am the fifth");
+  b();
+}
+
+function six(c) {
+  console.log("I am the sixth");
+  c();
+}
+
+function seven() {
+  console.log("I am the seventh");
+}
+
+// Chained calls:
+one(() => two(() => three(() => four(() => five(() => six(() => seven()))))));
