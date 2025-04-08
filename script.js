@@ -10,7 +10,16 @@ function one(x) {
   x();
 }
 
-function two() {
+function two(y) {
   console.log("I am the second");
+  y();
 }
-one(two);
+function three(z) {
+  console.log("I am the third");
+  z();
+}
+function four() {
+  console.log("I am the four");
+}
+
+one(() => two(() => three(four)));
