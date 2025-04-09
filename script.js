@@ -38,6 +38,4 @@ function six(c) {
 function seven() {
   console.log("I am the seventh");
 }
-
-// Chained calls:
-one(() => two(() => three(() => four(() => five(() => six(() => seven()))))));
+one(() => two(() => three(() => four(() => five(() => six(seven))))));
