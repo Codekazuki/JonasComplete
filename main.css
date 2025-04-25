@@ -4,8 +4,27 @@
   box-sizing: border-box;
 }
 body {
-  display: grid;
-  place-items: center;
-  height: 100dvh;
-  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 500px;
+}
+#catFact {
+  color: rgb(221, 41, 41);
+  height: 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem 4rem;
+}
+#newFactBtn {
+  margin-top: 24px;
+  color: white;
+  background-color: green;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 4px;
 }

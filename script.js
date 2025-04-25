@@ -1,48 +1,45 @@
 console.log("hello");
-// const api = "https://reqres.in/api/users";
+const catFactElement = document.getElementById("catFact");
+const newFactBtn = document.getElementById("newFactBtn");
 
-// const hi = fetch(api)
-//   .then((res) => res.json())
-//   .then((bread) => {
-//     console.log(bread);
-//     console.log(bread.data[0].first_name);
-//   });
-
-// const catAPI = "https://catfact.ninja/fact";
-// const catFact = fetch(catAPI)
-//   .then((response) => response.json())
-//   .then((fetchedFact) => {
-//     console.log(fetchedFact);
-//     console.log(fetchedFact.fact);
-//     console.log(fetchedFact.length);
-//   })
-//   .catch((err) => {
-//     console.log("This thing don lazzdent:", err);
-//   });
 const catAPI = "https://catfact.ninja/fact";
-async function getCat() {
-  let result = await fetch(catAPI);
-  let data = await result.json();
 
-  console.log(result);
-  console.log(data);
+async function fetchFact() {
+  try {
+    catFactElement.textContent = "loading....";
+    const result = await fetch(catAPI);
+    if (!result.ok) {
+      throw new Error(`${result.status}`);
+    }
+    const data = await result.json();
+
+    catFactElement.textContent = data.fact;
+  } catch (error) {
+    console.log(Error);
+  }
 }
-getCat();
-const checkGender = "https://api.genderize.io?name=Temitope";
-const check = fetch(checkGender)
-  .then((resp) => resp.json())
-  .then((factos) => {
-    console.log(factos);
-    console.log(`${factos.name} is a ${factos.gender} from sos so country`);
-    console.log(`Gender: ${factos.gender}`);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-// const checkCountry = "https://api.nationalize.io?name=Biodun";
-// const countrycheck = fetch(checkCountry)
-//   .then((response) => response.json())
-//   .then((fetchedNationality) => {
-//     console.log(fetchedNationality);
-//     console.log(fetchedNationality.country[0].country_id);
-//   });
+fetchFact();
+newFactBtn.addEventListener("click", fetchFact);
+
+async function fetchPredictedAge(name) {
+  try {
+    const resp = await fetch(`https://api.agify.io?name=${name}`);
+    if (!resp.ok) {
+      throw new Error(`${resp.status}`);
+    }
+    const data = await resp.json();
+    const result = document.getElementById("result");
+    result.textContent = `${name} is ${data.age}years old now`;
+  } catch (error) {
+    console.error(error);
+  }
+}
+fetchPredictedAge();
+
+document.getElementById("wrappingForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = document.getElementById("name").value.trim();
+  if (name) {
+    fetchPredictedAge(name);
+  }
+});
